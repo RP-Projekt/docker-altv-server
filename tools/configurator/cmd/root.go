@@ -24,5 +24,5 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.PersistentFlags().StringP("output", "o", "server.yaml", "Output filename. Only .yml, .yaml, .cfg, .toml file extension can be specified.")
+	rootCmd.PersistentFlags().StringP("output", "o", "server.toml", "Output filename. Only .yml, .yaml, .cfg, .toml file extension can be specified.")
 }

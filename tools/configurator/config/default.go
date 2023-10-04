@@ -70,6 +70,12 @@ modules = [
     "csharp-module"
 ]
 
+mapBoundsMinX = -10000
+mapBoundsMinY = -10000
+mapBoundsMaxX = 65536
+mapBoundsMaxY = 65536
+mapCellAreaSize = 100
+
 [worldProfiler]
 port = 7797
 host = "0.0.0.0"

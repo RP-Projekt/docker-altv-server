@@ -54,10 +54,11 @@ type Server struct {
 	AnnounceRetryErrorAttempts *uint   `env:"ANNOUNCE_RETRY_ERROR_ATTEMPTS" toml:"announceRetryErrorAttempts" yaml:"announceRetryErrorAttempts,omitempty" json:"announceRetryErrorAttempts,omitempty"`
 	DuplicatePlayers           *uint   `env:"DUPLICATE_PLAYERS" toml:"duplicatePlayers" yaml:"duplicatePlayers,omitempty" json:"duplicatePlayers,omitempty"`
 
-	MapBoundsMinX *uint `env:"MAP_BOUNDS_MIN_X" toml:"mapBoundsMinX" yaml:"mapBoundsMinX,omitempty" json:"mapBoundsMinX,omitempty"`
-	MapBoundsMinY *uint `env:"MAP_BOUNDS_MIN_Y" toml:"mapBoundsMinY" yaml:"mapBoundsMinY,omitempty" json:"mapBoundsMinY,omitempty"`
-	MapBoundsMaxX *uint `env:"MAP_BOUNDS_MAX_X" toml:"mapBoundsMaxX" yaml:"mapBoundsMaxX,omitempty" json:"mapBoundsMaxX,omitempty"`
-	MapBoundsMaxY *uint `env:"MAP_BOUNDS_MAX_Y" toml:"mapBoundsMaxY" yaml:"mapBoundsMaxY,omitempty" json:"mapBoundsMaxY,omitempty"`
+	MapBoundsMinX 	*uint `env:"MAP_BOUNDS_MIN_X" toml:"mapBoundsMinX" yaml:"mapBoundsMinX,omitempty" json:"mapBoundsMinX,omitempty"`
+	MapBoundsMinY 	*uint `env:"MAP_BOUNDS_MIN_Y" toml:"mapBoundsMinY" yaml:"mapBoundsMinY,omitempty" json:"mapBoundsMinY,omitempty"`
+	MapBoundsMaxX 	*uint `env:"MAP_BOUNDS_MAX_X" toml:"mapBoundsMaxX" yaml:"mapBoundsMaxX,omitempty" json:"mapBoundsMaxX,omitempty"`
+	MapBoundsMaxY 	*uint `env:"MAP_BOUNDS_MAX_Y" toml:"mapBoundsMaxY" yaml:"mapBoundsMaxY,omitempty" json:"mapBoundsMaxY,omitempty"`
+	MapCellAreaSize *uint `env:"MAP_CELL_AREA_SIZE" toml:"mapCellAreaSize" yaml:"mapCellAreaSize,omitempty" json:"mapCellAreaSize,omitempty"`
 
 	ColShapeTickRate  *uint         `env:"COL_SHAPE_TICK_RATE" toml:"colShapeTickRate" yaml:"colShapeTickRate,omitempty" json:"colShapeTickRate,omitempty"`
 	LogStreams        []string      `env:"LOG_STREAMS" toml:"logStreams" yaml:"logStreams,omitempty,flow" json:"logStreams,omitempty,flow"`
