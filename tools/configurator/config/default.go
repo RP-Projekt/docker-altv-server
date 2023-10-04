@@ -96,6 +96,7 @@ port = 9229
 disableDependencyDownload= true
 
 [voice]
+streamingTickRate = 10
 bitrate = 64000
 externalSecret = "1234567890"
 externalHost = "127.0.0.1"
