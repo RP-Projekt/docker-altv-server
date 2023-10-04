@@ -1,4 +1,4 @@
-FROM golang:bullseye AS configurator
+FROM golang:bookworm AS configurator
 
 WORKDIR /usr/src/app/
 
@@ -10,7 +10,7 @@ RUN go build -o /usr/src/app/configurator -ldflags "-s -w" -v ./main.go
 
 
 
-FROM ubuntu:focal AS final
+FROM ubuntu:jammy AS final
 
 ARG BRANCH=release
 ARG LIBNODE_VERSION=108
