@@ -26,6 +26,7 @@ type CsharpModule struct {
 }
 
 type Voice struct {
+	StreamingTickRate  *uint   `env:"STREAMING_TICKRATE" toml:"streamingTickRate" yaml:"streamingTickRate,omitempty" json:"streamingTickRate,omitempty"`
 	Bitrate            *uint   `env:"BITRATE" toml:"bitrate" yaml:"bitrate,omitempty" json:"bitrate,omitempty"`
 	ExternalSecret     *string `env:"EXTERNAL_SECRET" toml:"externalSecret" yaml:"externalSecret,omitempty" json:"externalSecret,omitempty"`
 	ExternalHost       *string `env:"EXTERNAL_HOST" toml:"externalHost" yaml:"externalHost,omitempty" json:"externalHost,omitempty"`
