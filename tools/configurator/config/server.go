@@ -28,7 +28,7 @@ type CsharpModule struct {
 type Voice struct {
 	StreamingTickRate  *uint   `env:"STREAMING_TICKRATE" toml:"streamingTickRate" yaml:"streamingTickRate,omitempty" json:"streamingTickRate,omitempty"`
 	Bitrate            *uint   `env:"BITRATE" toml:"bitrate" yaml:"bitrate,omitempty" json:"bitrate,omitempty"`
-	ExternalSecret     *string `env:"EXTERNAL_SECRET" toml:"externalSecret" yaml:"externalSecret,omitempty" json:"externalSecret,omitempty"`
+	ExternalSecret     *uint64 `env:"EXTERNAL_SECRET" toml:"externalSecret" yaml:"externalSecret,omitempty" json:"externalSecret,omitempty"`
 	ExternalHost       *string `env:"EXTERNAL_HOST" toml:"externalHost" yaml:"externalHost,omitempty" json:"externalHost,omitempty"`
 	ExternalPort       *uint16 `env:"EXTERNAL_PORT" toml:"externalPort" yaml:"externalPort,omitempty" json:"externalPort,omitempty"`
 	ExternalPublicHost *string `env:"EXTERNAL_PUBLIC_HOST" toml:"externalPublicHost" yaml:"externalPublicHost,omitempty" json:"externalPublicHost,omitempty"`
@@ -55,10 +55,10 @@ type Server struct {
 	AnnounceRetryErrorAttempts *uint   `env:"ANNOUNCE_RETRY_ERROR_ATTEMPTS" toml:"announceRetryErrorAttempts" yaml:"announceRetryErrorAttempts,omitempty" json:"announceRetryErrorAttempts,omitempty"`
 	DuplicatePlayers           *uint   `env:"DUPLICATE_PLAYERS" toml:"duplicatePlayers" yaml:"duplicatePlayers,omitempty" json:"duplicatePlayers,omitempty"`
 
-	MapBoundsMinX 	*int `env:"MAP_BOUNDS_MIN_X" toml:"mapBoundsMinX" yaml:"mapBoundsMinX,omitempty" json:"mapBoundsMinX,omitempty"`
-	MapBoundsMinY 	*int `env:"MAP_BOUNDS_MIN_Y" toml:"mapBoundsMinY" yaml:"mapBoundsMinY,omitempty" json:"mapBoundsMinY,omitempty"`
-	MapBoundsMaxX 	*int `env:"MAP_BOUNDS_MAX_X" toml:"mapBoundsMaxX" yaml:"mapBoundsMaxX,omitempty" json:"mapBoundsMaxX,omitempty"`
-	MapBoundsMaxY 	*int `env:"MAP_BOUNDS_MAX_Y" toml:"mapBoundsMaxY" yaml:"mapBoundsMaxY,omitempty" json:"mapBoundsMaxY,omitempty"`
+	MapBoundsMinX   *int  `env:"MAP_BOUNDS_MIN_X" toml:"mapBoundsMinX" yaml:"mapBoundsMinX,omitempty" json:"mapBoundsMinX,omitempty"`
+	MapBoundsMinY   *int  `env:"MAP_BOUNDS_MIN_Y" toml:"mapBoundsMinY" yaml:"mapBoundsMinY,omitempty" json:"mapBoundsMinY,omitempty"`
+	MapBoundsMaxX   *int  `env:"MAP_BOUNDS_MAX_X" toml:"mapBoundsMaxX" yaml:"mapBoundsMaxX,omitempty" json:"mapBoundsMaxX,omitempty"`
+	MapBoundsMaxY   *int  `env:"MAP_BOUNDS_MAX_Y" toml:"mapBoundsMaxY" yaml:"mapBoundsMaxY,omitempty" json:"mapBoundsMaxY,omitempty"`
 	MapCellAreaSize *uint `env:"MAP_CELL_AREA_SIZE" toml:"mapCellAreaSize" yaml:"mapCellAreaSize,omitempty" json:"mapCellAreaSize,omitempty"`
 
 	ColShapeTickRate  *uint         `env:"COL_SHAPE_TICK_RATE" toml:"colShapeTickRate" yaml:"colShapeTickRate,omitempty" json:"colShapeTickRate,omitempty"`
