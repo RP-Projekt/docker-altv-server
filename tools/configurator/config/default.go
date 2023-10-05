@@ -98,7 +98,7 @@ disableDependencyDownload= true
 [voice]
 streamingTickRate = 10
 bitrate = 64000
-externalSecret = "1234567890"
+externalSecret = 1234567890
 externalHost = "127.0.0.1"
 externalPort = 7798
 externalPublicHost = "xx.xx.xx.xx"
