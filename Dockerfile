@@ -10,7 +10,7 @@ RUN go build -o /usr/src/app/configurator -ldflags "-s -w" -v ./main.go
 
 
 
-FROM bitnami/dotnet-sdk:7-debian-11 AS final
+FROM mcr.microsoft.com/dotnet/sdk:7.0-jammy AS final
 
 ARG BRANCH=release
 ARG LIBNODE_VERSION=108
