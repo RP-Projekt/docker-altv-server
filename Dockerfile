@@ -8,9 +8,7 @@ RUN go mod download && go mod verify
 COPY ./tools/configurator ./
 RUN go build -o /usr/src/app/configurator -ldflags "-s -w" -v ./main.go
 
-
-
-FROM mcr.microsoft.com/dotnet/sdk:7.0-jammy AS final
+FROM ubuntu:jammy AS final
 
 ARG BRANCH=release
 ARG LIBNODE_VERSION=108
