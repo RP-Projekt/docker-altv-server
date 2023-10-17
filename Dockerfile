@@ -1,13 +1,3 @@
-FROM golang:bookworm AS configurator
-
-WORKDIR /usr/src/app/
-
-COPY ./tools/configurator ./
-RUN go mod download && go mod verify
-
-COPY ./tools/configurator ./
-RUN go build -o /usr/src/app/configurator -ldflags "-s -w" -v ./main.go
-
 FROM ubuntu:jammy AS final
 
 ARG BRANCH=release
@@ -23,10 +13,8 @@ ARG ALTV_SERVER_MODULES="csharp-module,js-module"
 ENV ALTV_SERVER_MODULES=${ALTV_SERVER_MODULES}
 
 COPY ./.docker/scripts/install.sh ./.docker/scripts/entrypoint.sh /root/
-COPY --from=configurator /usr/src/app/configurator /opt/altv/configurator
 
 RUN chmod +x /root/install.sh && \
-    chmod +x /opt/altv/configurator && \
     /root/install.sh && \
     rm -f /root/install.sh
 
