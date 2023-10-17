@@ -1,4 +1,4 @@
-FROM ubuntu:jammy AS final
+FROM debian:bullseye AS final
 
 ARG BRANCH=release
 ARG LIBNODE_VERSION=108
