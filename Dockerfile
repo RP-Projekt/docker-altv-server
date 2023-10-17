@@ -1,4 +1,4 @@
-FROM debian:bullseye AS final
+FROM ubuntu:focal AS final
 
 ARG BRANCH=release
 ARG LIBNODE_VERSION=108
